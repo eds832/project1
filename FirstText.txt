@@ -582,6 +582,43 @@ Fast-forward
 Спец инфо из ветки new_f номер 2
 Спец 582
 
+Насоздавали всяких пересекающихся строк в 2-х ветках и слияние не получается:
+
+$ git merge master
+error: Merging is not possible because you have unmerged files.
+hint: Fix them up in the work tree, and then use 'git add/rm <file>'
+hint: as appropriate to mark resolution and make a commit.
+fatal: Exiting because of an unresolved conflict.
+
+Качаем и ставим: 
+
+https://sourceforge.net/projects/kdiff3/files/
+
+$ git config --global mergetool.kdiff3.cmd '"C:\\Program Files\\KDiff3\\kdiff3" $BASE $LOCAL $REMOTE -o $MERGED'
+или прописываем в Юзерс/юзер/.gitignore:
+[mergetool "kdiff3"]
+	cmd = \"C:\\\\Program Files\\\\KDiff3\\\\kdiff3\" $BASE $LOCAL $REMOTE -o $MERGED
+	
+Пользуемся тулом:
+
+$ git mergetool(откроется окно - нажать сверху стрелки навстречу, потом A, B или C или сочетание B+C; дискету; закрыть)
+Merging:
+FirstText.txt
+
+Normal merge conflict for 'FirstText.txt':
+  {local}: modified file
+  {remote}: modified file
+  
+Затем коммитим:
+ $ git add .
+$ git commit -m"1"
+[new_f 1e9c3c6] 1
+
+
+
+
+
+
 
 
 
