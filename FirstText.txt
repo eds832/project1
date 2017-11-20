@@ -245,7 +245,7 @@ Eduard_Sardyka@EPBYMINW8126 MINGW64 /d/git-projects/project1 (master)
 Видим, что добавился долько один файл - он был проиндексирован раннее. 
 Чтобы добавить другой - его необходимо также проиндексировать.
 
-Добавление всех:
+Добавление все файлы:
 
 $ git add .
 
@@ -267,4 +267,33 @@ $ git commit -m"I commit my last modification"
 [master 6ffb7b2] I commit my last modification
  2 files changed, 71 insertions(+), 1 deletion(-)
  create mode 100644 docs/DocToNotIgnore1.log
+ 
+ После внесения изменений в файл FirstText.txt гит статус:
+ 
+ $ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+        modified:   FirstText.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+Eduard_Sardyka@EPBYMINW8126 MINGW64 /d/git-projects/project1 (master)
+
+Пробуем откатиться до предыдущего состояния:
+
+$ git checkout -- FirstText.txt
+
+Eduard_Sardyka@EPBYMINW8126 MINGW64 /d/git-projects/project1 (master)
+
+Просмотрим гит статус:
+
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+ 
+ 
 
