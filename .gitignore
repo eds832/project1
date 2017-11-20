@@ -1,0 +1,8 @@
+# It is a comment
+
+# Git will be ignore files in the folder logs/
+logs/
+
+# Git will be ignore files in the folder docs/ with extension txt
+docs/*.txt
+
