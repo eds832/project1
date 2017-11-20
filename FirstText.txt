@@ -609,10 +609,47 @@ Normal merge conflict for 'FirstText.txt':
   {local}: modified file
   {remote}: modified file
   
+$ git status
+On branch new_f
+All conflicts fixed but you are still merging.
+  (use "git commit" to conclude merge)
+
+Changes to be committed:
+
+        modified:   FirstText.txt
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        FirstText.txt.orig
+
+  
 Затем коммитим:
  $ git add .
 $ git commit -m"1"
 [new_f 1e9c3c6] 1
+
+$ git checkout master
+Switched to branch 'master'
+
+$ git merge new_f
+Updating 88f4ce4..c06defe
+Fast-forward
+ FirstText.txt      |  61 ++++-
+ FirstText.txt.orig | 654 +++++++++++++++++++++++++++++++++++++++++++++++++++++
+ 2 files changed, 714 insertions(+), 1 deletion(-)
+ create mode 100644 FirstText.txt.orig
+ 
+ $ git branch -v
+* master c06defe Merge branch 'master' into new_f Try to do merge from new_f
+  new_f  c06defe Merge branch 'master' into new_f Try to do merge from new_f
+  new_f2 d416887 My first commit from Notepad
+
+ 
+ Две ветки слились!
+
+
+
 
 
 
