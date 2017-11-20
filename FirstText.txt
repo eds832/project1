@@ -447,6 +447,31 @@ $ git branch -v
   new_f  d416887 My first commit from Notepad
 * new_f2 d416887 My first commit from Notepad
 
+Переключимся на главную(мастер) ветку:
+
+$ git checkout master
+Switched to branch 'master'
+M       FirstText.txt
+
+Добавим все:
+
+$ git add .
+
+Закомитим ветку мастер:
+
+$ git commit -m"I commit all info to master branch"
+[master 5a54280] I commit all info to master branch
+ 1 file changed, 58 insertions(+), 2 deletions(-)
+ 
+Просмотрим все ветки:
+
+$ git branch -v
+* master 5a54280 I commit all info to master branch
+  new_f  d416887 My first commit from Notepad
+  new_f2 d416887 My first commit from Notepad
+
+
+
 
  
 
