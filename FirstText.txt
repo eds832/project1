@@ -294,6 +294,60 @@ $ git status
 On branch master
 nothing to commit, working tree clean
 
+Просмотр лога коммитов (если оно очень длинное то выход клавишей Q):
+
+$ git log
+commit ced9217e430a4f4a995cb840bd22d6f3c5133cbd (HEAD -> master)
+Author: Eduard <eds832@gmail.com>
+Date:   Mon Nov 20 15:48:28 2017 +0300
+
+    I commit last changes
+
+commit 42a9cb5a6c482e8838699e6c03da8ab7edb6816d
+Author: Eduard <eds832@gmail.com>
+Date:   Mon Nov 20 15:41:27 2017 +0300
+
+    I commit my last changes
+
+commit 6ffb7b2f3d5ade5bf8af7246bd7ef18fb1e15ae3
+Author: Eduard <eds832@gmail.com>
+Date:   Mon Nov 20 15:38:44 2017 +0300
+
+    I commit my last modification
+
+commit 52ae322a3a25b3ec81ffa7ab486c495fc8ccd389
+Author: Eduard <eds832@gmail.com>
+Date:   Mon Nov 20 15:11:09 2017 +0300
+
+    This is initial commit
+
+Просмотр помощи по команде лога (Откроется окно браузера с подсказками):
+
+$ git help log
+
+Просмотр более кратких логов (%h - краткий код коммита, %ar - время коммита, %s - текст коммита):
+
+$ git log --pretty=format:"%h - %an, %ar : %s"
+ced9217 - Eduard, 15 minutes ago : I commit last changes
+42a9cb5 - Eduard, 22 minutes ago : I commit my last changes
+6ffb7b2 - Eduard, 25 minutes ago : I commit my last modification
+52ae322 - Eduard, 52 minutes ago : This is initial commit
+
+Просмотр коммитов за последние 20мин:
+
+$ git log --since=20minute
+commit ced9217e430a4f4a995cb840bd22d6f3c5133cbd (HEAD -> master)
+Author: Eduard <eds832@gmail.com>
+Date:   Mon Nov 20 15:48:28 2017 +0300
+
+    I commit last changes
+
+Аналогично: --since=1hour, $ git log --since=2.weeks, $ git log --since=2week
+
+
+
+
+
  
  
 
