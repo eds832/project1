@@ -399,6 +399,62 @@ $ git config --global core.editor "'C:\ProgramData\Microsoft\Windows\Start menu\
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Это специальный коммит для ветки new_f
+
+
  
  
 
