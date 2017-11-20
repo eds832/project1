@@ -535,6 +535,52 @@ $ git branch -v
 
 Это специальный коммит для ветки new_f
 
+Я только что переключился на ветку new_f,   изменил и закомитил ее:
+
+$ git checkout new_f
+
+$ git add .
+
+$ git commit -m"I commit some info in branch new_f"
+[new_f 20f4536] I commit some info in branch new_f
+ 1 file changed, 56 insertions(+)
+ 
+Настроим специальный тул для слияния:
+
+$ git config --global merge.tool kdiff3
+
+Это теперь в Юзерс/юзер/.gitignore :
+
+[merge]
+	tool = kdiff3
+	
+Из ветки new_f пробуем слияние(merge):
+
+$ git merge master
+Auto-merging FirstText.txt
+Merge made by the 'recursive' strategy.
+ FirstText.txt | 85 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++--
+ 1 file changed, 83 insertions(+), 2 deletions(-)
+
+Переходим в ветку master:
+
+$ git checkout master
+Switched to branch 'master'
+
+и пробуем слияние из мастера:
+
+$ git merge new_f
+Updating 842952e..01cd8b8
+Fast-forward
+ FirstText.txt | 56 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ 1 file changed, 56 insertions(+)
+
+ вроде пока без конфликта
+
+Спец инфо из ветки мастер
+
+
+
 
  
  
