@@ -346,8 +346,55 @@ Date:   Mon Nov 20 15:48:28 2017 +0300
 
 Занесем несколько букв для проверки
 
+Затем коммитим ($ git add .  $ git commit -m"Comment") 
+
 Добавим еще пару букв
 
+Затем коммитим ($ git add .  $ git commit -m"Comment") 
+
+Просмотр изменеий в последних 2 коммитах:
+
+$ git log -p -2
+commit 6f093569086a7c8ed540293af5d8f681a5856ffc (HEAD -> master)
+Author: Eduard <eds832@gmail.com>
+Date:   Mon Nov 20 16:20:21 2017 +0300
+
+    I commit last words
+
+diff --git a/FirstText.txt b/FirstText.txt
+index c22040d..0eb0d0c 100644
+--- a/FirstText.txt
++++ b/FirstText.txt
+@@ -346,6 +346,8 @@ Date:   Mon Nov 20 15:48:28 2017 +0300
+
+ Занесем несколько букв для проверки
+
++Добавим еще пару букв
++
+
+
+
+
+commit eed0323c32c9559a8eb27d6d5a132b037ffe3e7e
+Author: Eduard <eds832@gmail.com>
+Date:   Mon Nov 20 16:19:24 2017 +0300
+
+    I commit some letters
+
+diff --git a/FirstText.txt b/FirstText.txt
+index da6b7de..c22040d 100644
+--- a/FirstText.txt
++++ b/FirstText.txt
+@@ -344,6 +344,8 @@ Date:   Mon Nov 20 15:48:28 2017 +0300
+
+ Аналогично: --since=1hour, $ git log --since=2.weeks, $ git log --since=2week
+
++Занесем несколько букв для проверки
++
+
+Добавим новый редактор для коммитов:
+$ git config --global core.editor "'C:\ProgramData\Microsoft\Windows\Start menu\Programs\Notepad++\Notepad++.exe -nultiInst -notabbar -nosession -noPlugin"    
+Внесем измения в этот документ и проверим:
 
 
 
