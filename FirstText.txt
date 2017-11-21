@@ -648,6 +648,23 @@ Fast-forward
  
  Две ветки слились!
 
+ Создадим репозиторий на гитхаб и отправим туда все из локального:
+ 
+ $ git remote add origin https://github.com/eds832/project1.git
+ 
+$ git push -u origin master (здесь будут запрошены логин и пароль от гита)
+Counting objects: 77, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (75/75), done.
+Writing objects: 100% (77/77), 15.77 KiB | 1.21 MiB/s, done.
+Total 77 (delta 25), reused 0 (delta 0)
+remote: Resolving deltas: 100% (25/25), done.
+To https://github.com/eds832/project1.git
+ * [new branch]      master -> master
+Branch 'master' set up to track remote branch 'master' from 'origin'.
+
+
+
 
 
 
