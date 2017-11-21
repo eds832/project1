@@ -663,6 +663,45 @@ To https://github.com/eds832/project1.git
  * [new branch]      master -> master
 Branch 'master' set up to track remote branch 'master' from 'origin'.
 
+Теперь статус:
+
+$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+        modified:   FirstText.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+Закомитим и посмотрим статус:
+
+$ git add FirstText.txt
+
+$ git commit -m"I commit FirstText.txt"
+[master c459d53] I commit FirstText.txt
+ 1 file changed, 17 insertions(+)
+ 
+ $ git status
+On branch master
+Your branch is ahead of 'origin/master' by 1 commit.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+
+Пропушим этот коммит на гитхаб:
+
+$ git push
+
+
+
+
+
+
+
 
 
 
